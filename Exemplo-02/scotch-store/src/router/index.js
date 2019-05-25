@@ -9,8 +9,12 @@ import Conditional from '@/components/Conditional';
 import ListRendering from '@/components/ListRendering';
 
 import Home from '@/pages/Home';
-import Admin from '@/pages/Admin';
 import Cart from '@/pages/Cart';
+
+import Admin from '@/pages/admin/Index';
+import New from '@/pages/admin/New';
+import Products from '@/pages/admin/Products';
+import Edit from '@/pages/admin/Edit';
 
 Vue.use(Router);
 
@@ -22,14 +26,31 @@ export default new Router({
       component: Home,
     },
     {
-      path: '/admin',
-      name: 'Admin',
-      component: Admin,
-    },
-    {
       path: '/cart',
       name: 'Cart',
       component: Cart,
+    },
+    {
+      path: '/admin',
+      name: 'Admin',
+      component: Admin,
+      children: [
+        {
+          path: 'new',
+          name: 'New',
+          component: New,
+        },
+        {
+          path: '',
+          name: 'Products',
+          component: Products,
+        },
+        {
+          path: 'edit/:id',
+          name: 'Edit',
+          component: Edit,
+        },
+      ],
     },
     {
       path: '/helloworld',
