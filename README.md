@@ -1,0 +1,1 @@
+# Aprendendo Vue com o site <https://scotch.io/courses/build-an-online-shop-with-vue>
