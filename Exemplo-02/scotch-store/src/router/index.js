@@ -6,6 +6,7 @@ import Home from '@/components/HelloWorld';
 import TodoList from '@/components/ToDoList';
 import Counter from '@/components/Counter';
 import Conditional from '@/components/Conditional';
+import ListRendering from '@/components/ListRendering';
 
 Vue.use(Router);
 
@@ -30,6 +31,11 @@ export default new Router({
       path: '/conditional',
       name: 'Conditional',
       component: Conditional,
+    },
+    {
+      path: '/listrendering',
+      name: 'ListRendering',
+      component: ListRendering,
     },
   ],
 });
