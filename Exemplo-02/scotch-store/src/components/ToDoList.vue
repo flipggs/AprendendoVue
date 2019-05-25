@@ -2,10 +2,12 @@
   <div>
     <h3>{{title}}</h3>
 
-    <!-- <input type="text" placeholder="item da lista" value="{{listIten}}" />
-    <button @click="addItem">Add item</button> -->
+    <input type="text" placeholder="item da lista" v-model="listIten">
+    <button @click="addItem">Add item</button>
 
-    <!-- <ul></ul> -->
+    <ul>
+      <li v-for="item in data" :key="item.name">{{item.name}}</li>
+    </ul>
   </div>
 </template>
 
@@ -14,16 +16,16 @@ export default {
   name: "ToDoList",
   data() {
     return {
-        data: [],
+      data: [],
       title: "To do list",
-      listIten: "",
+      listIten: ""
     };
   },
-//   methods: {
-//       additem(){
-//           this.data.push({name: this.listIten})
-//       }
-//   }
+  methods: {
+    additem() {
+      this.data.push({ name: this.listIten });
+    }
+  }
 };
 </script>
 

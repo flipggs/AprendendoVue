@@ -7,6 +7,7 @@ import TodoList from '@/components/ToDoList';
 import Counter from '@/components/Counter';
 import Conditional from '@/components/Conditional';
 import ListRendering from '@/components/ListRendering';
+import TwoWayBinding from '@/components/TwoWayBinding';
 
 import Home from '@/pages/Home';
 import Cart from '@/pages/Cart';
@@ -76,6 +77,11 @@ export default new Router({
       path: '/listrendering',
       name: 'ListRendering',
       component: ListRendering,
+    },
+    {
+      path: '/twowaybinding',
+      name: 'TwoWayBinding',
+      component: TwoWayBinding,
     },
   ],
 });
